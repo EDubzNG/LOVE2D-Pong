@@ -16,6 +16,7 @@ gameState = 'title'
 -- Require title screen and score
 require 'title'
 require 'score'
+require 'music'
 
 -- Load function
 function love.load()
@@ -25,6 +26,8 @@ function love.load()
         vsync = true
     })
 
+    -- load cool music
+    playMusic()
     -- Load title screen
     titleLoad()
 
