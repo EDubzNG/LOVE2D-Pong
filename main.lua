@@ -26,8 +26,7 @@ function love.load()
         vsync = true
     })
 
-    -- load cool music
-    playMusic()
+
     -- Load title screen
     titleLoad()
 
@@ -58,6 +57,9 @@ function love.update(dt)
     if gameState == 'title' then
         titleUpdate(dt)
     elseif gameState == 'play' then
+        -- load cool music
+        playMusic()
+
         -- Player 1 movement
         if love.keyboard.isDown('w') then
             player1Y = math.max(0, player1Y - PADDLE_SPEED * dt)
